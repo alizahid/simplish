@@ -22,7 +22,7 @@ const Home: NextPage = () => {
         </header>
 
         <section className="mt-16">
-          <Link href="/api/oauth/sign-in?provider=github">
+          <Link href="/api/auth/sign-in?provider=github">
             <a className="flex items-center bg-gray-900 hover:bg-gray-800 px-4 py-3 rounded-full">
               <span className="text-white font-medium">Sign in</span>
               <img className="h-6 w-6 ml-2" src="/img/ui/github.svg" />

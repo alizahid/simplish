@@ -14,7 +14,7 @@ body {
 
 a,
 button {
-  @apply transition-all text-rose-600 outline-none;
+  @apply transition-all outline-none;
 
   &:disabled {
     @apply cursor-not-allowed;
@@ -27,6 +27,10 @@ button {
   &:active {
     filter: brightness(0.9);
   }
+}
+
+a {
+  @apply text-rose-600;
 }
 
 a,
