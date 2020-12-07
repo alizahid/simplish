@@ -57,6 +57,10 @@ export const ItemList: FunctionComponent<Props> = ({ items, list, user }) => {
                 className="w-full"
                 onChange={(content) => setContent(content)}
                 onEnter={async () => {
+                  if (!content) {
+                    return
+                  }
+
                   await createItem({
                     content,
                     list: list.id,

@@ -42,6 +42,10 @@ export const Item: FunctionComponent<Props> = ({ item }) => {
           }}
           onChange={(content) => setContent(content)}
           onEnter={() => {
+            if (!content) {
+              return
+            }
+
             updateItem({
               ...item,
               content
