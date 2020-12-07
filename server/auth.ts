@@ -20,6 +20,10 @@ export const getProfile = (
 ): Promise<User> => {
   const { token } = parseCookies(context, cookieOptions)
 
+  if (!token) {
+    return null
+  }
+
   const email = verify(token, process.env.TOKEN_SECRET)
 
   return getUser(fauna, email as string)

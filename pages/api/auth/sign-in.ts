@@ -5,15 +5,17 @@ const handler: NextApiHandler = async (req, res) => {
     query: { provider }
   } = req
 
-  if (provider === 'github') {
-    res.redirect(
-      `https://github.com/login/oauth/authorize?scope=user:email&client_id=${process.env.GITHUB_CLIENT_ID}`
-    )
+  switch (provider) {
+    case 'github':
+      res.redirect(
+        `https://github.com/login/oauth/authorize?scope=user:email&client_id=${process.env.GITHUB_CLIENT_ID}`
+      )
 
-    return
+      break
+
+    default:
+      res.redirect('/404')
   }
-
-  res.redirect('/404')
 }
 
 export default handler

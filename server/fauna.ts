@@ -66,12 +66,6 @@ export const createItem = async (
   user: User,
   data: ListItem
 ): Promise<ListItem> => {
-  console.log('data', {
-    ...pick(data, ['list', 'content', 'order']),
-    completed: false,
-    user: user.id
-  })
-
   const item: FaunaDocument = await fauna.query(
     q.Create(q.Collection('items'), {
       data: {
