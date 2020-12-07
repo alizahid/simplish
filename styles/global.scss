@@ -1,0 +1,52 @@
+// fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+// global
+
+::selection {
+  @apply bg-gray-300;
+}
+
+body {
+  @apply bg-white text-black dark:bg-black dark:text-white font-body cursor-default;
+}
+
+a,
+button {
+  @apply transition-all text-rose-600 outline-none;
+
+  &:disabled {
+    @apply cursor-not-allowed;
+  }
+
+  &:hover {
+    filter: brightness(1.1);
+  }
+
+  &:active {
+    filter: brightness(0.9);
+  }
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  @apply outline-none;
+
+  &:focus {
+    @apply outline-none;
+  }
+}
+
+// layout
+
+#__next {
+  @apply flex flex-col min-h-screen;
+
+  > main {
+    @apply flex flex-col flex-1;
+  }
+}
