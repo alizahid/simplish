@@ -1,6 +1,6 @@
-import { useDeleteItem, useUpdateItem } from 'hooks/item'
 import React, { FunctionComponent, useState } from 'react'
 
+import { useDeleteItem, useUpdateItem } from '@simplish/hooks'
 import { ListItem } from '@simplish/types'
 
 import { Icon } from './icon'
