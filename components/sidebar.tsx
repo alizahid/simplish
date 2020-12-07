@@ -63,7 +63,7 @@ export const Sidebar: FunctionComponent<Props> = ({
             }}>
             {sortBy(lists, 'order').map((list) => (
               <button
-                className={`text-left block mt-4 first:mt-8 ${
+                className={`w-full text-left block mt-4 first:mt-8 ${
                   list.id === selected?.id
                     ? 'text-black dark:text-white font-medium'
                     : 'text-gray-500'
