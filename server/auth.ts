@@ -10,7 +10,7 @@ const cookieOptions = {
   domain: process.env.URI,
   httpOnly: true,
   path: '/',
-  sameSite: 'strict',
+  sameSite: 'lax',
   secure: process.env.NODE_ENV === 'production'
 }
 
