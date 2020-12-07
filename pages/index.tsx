@@ -32,7 +32,7 @@ const Home: NextPage = () => {
               onClick={() => setLoading(true)}>
               <span className="text-white font-medium">Sign in</span>
               {loading ? (
-                <Spinner className="ml-2" />
+                <Spinner className="ml-2" color="bg-white" />
               ) : (
                 <img className="h-6 w-6 ml-2" src="/img/ui/github.svg" />
               )}

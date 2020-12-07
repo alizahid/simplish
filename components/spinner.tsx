@@ -2,9 +2,10 @@ import React, { FunctionComponent } from 'react'
 
 interface Props {
   className?: string
+  color?: string
 }
 
-export const Spinner: FunctionComponent<Props> = ({ className }) => (
+export const Spinner: FunctionComponent<Props> = ({ className, color }) => (
   <div className={className}>
     <div className={`flex items-center h-2 w-8`}>
       <style jsx>{`
@@ -34,9 +35,21 @@ export const Spinner: FunctionComponent<Props> = ({ className }) => (
         }
       `}</style>
 
-      <div className="one h-2 w-2 rounded-full bg-black dark:bg-white" />
-      <div className="two h-2 w-2 rounded-full ml-1 bg-black dark:bg-white" />
-      <div className="three h-2 w-2 rounded-full ml-1 bg-black dark:bg-white" />
+      <div
+        className={`one h-2 w-2 rounded-full ${
+          color ?? 'bg-black dark:bg-white'
+        }`}
+      />
+      <div
+        className={`two h-2 w-2 rounded-full ml-1 ${
+          color ?? 'bg-black dark:bg-white'
+        }`}
+      />
+      <div
+        className={`three h-2 w-2 rounded-full ml-1 ${
+          color ?? 'bg-black dark:bg-white'
+        }`}
+      />
     </div>
   </div>
 )
