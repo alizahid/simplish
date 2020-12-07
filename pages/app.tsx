@@ -32,6 +32,7 @@ const App: NextPage<Props> = (props) => {
         <Header user={user} />
         <div className="flex flex-1 flex-col lg:flex-row">
           <Sidebar
+            items={items}
             lists={lists}
             onChange={(list) => setList(list)}
             selected={list}
